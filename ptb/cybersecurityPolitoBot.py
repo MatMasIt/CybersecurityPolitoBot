@@ -75,7 +75,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 def validate_email(email: str) -> bool:
     """Validate the email address to match the format sXXXXXX@studenti.polito.it."""
-    email_regex = r'^s\d{6}@studenti\.polito\.it$'
+    email_regex = r'^s[0-9]{6}@studenti\.polito\.it$'
     return re.match(email_regex, email) is not None
 
 def github_invite(email: str) -> bool:
